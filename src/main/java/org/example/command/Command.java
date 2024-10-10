@@ -8,14 +8,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Command {
-@EventListener(ApplicationReadyEvent.class)
-public void runAfterStartup(){
-    System.out.println("Выполняется runAfterStartup.....");
+    @EventListener(ApplicationReadyEvent.class)
+    public void runAfterStartup(){
+        System.out.println("Выполняется runAfterStartup.....");
+    }
 }
-}
-//public class Command implements CommandLineRunner {
-//    @Override
-//    public void run(String... args) throws Exception {
-//        System.out.println("Выполняется run из CommandLineRunner");
-//    }
-//}
+
